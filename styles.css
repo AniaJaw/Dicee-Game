@@ -104,7 +104,6 @@ p {
   cursor: pointer;
   margin: 45px auto 26px;
   padding: 12px 26px;
-  background: transparent;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.1rem;
@@ -113,7 +112,7 @@ p {
   border-radius: 5px;
   background-color: rgba(0, 25, 44, .5);
   border: 2px solid #0174c2;
-  box-shadow: 0px 0px 9px #236aac;
+  box-shadow: 0 0 9px #236aac;
   transition: all .3s;
 }
 #roll:hover {
