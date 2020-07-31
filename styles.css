@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,400,700|Roboto+Mono:400,500i&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-image: url("images/sky.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bg-wrapper, .wrapper {
+  box-sizing: border-box;
+  height: 80vh;
+  width: 80vw;
+  min-height: 590px;
+  max-width: 1200px
+}
+.bg-wrapper {
+  background-image: url("images/sky.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px) brightness(55%);
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, .7);
+  position: relative;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgba(255,255,255, .7);
+  padding: 2vh 1vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 30px 30px;
+  padding-top: 1.6rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 18px;
+  text-shadow: 2px 6px 12px #236aac;
+  font-size: 3rem;
+  color: #eeee;
+}
+.winner {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-weight: 200;
+  font-size: .8rem;
+  max-width: 13rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0 .2rem 1rem;
+  border-bottom: 1px solid #236aac;
+  letter-spacing: 2px
+}
+.winner h2 {
+  transform: translateY(3rem);
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+.winner h2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+p {
+  font-size: 1.4rem;
+  color: #EEEEEE;
+  font-family: 'Open Sans', sans-serif;
+}
+#roll {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: 45px auto 26px;
+  padding: 12px 26px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #eee;
+  border-radius: 5px;
+  background-color: rgba(0, 25, 44, .5);
+  border: 2px solid #0174c2;
+  box-shadow: 0px 0px 9px #236aac;
+  transition: all .3s;
+}
+#roll:hover {
+background-color: #236aac;
+}
+
+footer p {
+  color: #EEEEEE;
+  font-size: .9rem;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* DICE CSS */
+.dice-inner {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+.face {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 1.5rem;
+  padding: 1.2rem;
+  border-radius: 5px;
+  background-color: rgba(0, 25, 44, .5);
+  border: 2px solid #0174c2;
+  box-shadow: 0 0 9px #236aac;
+}
+.face .dot {
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #EEEEEE;
+  border-radius: 50%;
+}
+.face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.first-face {
+  justify-content: center;
+  align-items: center;
+}
+.second-face .dot:last-of-type, .third-face .dot:last-of-type {
+  align-self: flex-end;
+}
+.third-face .dot:nth-child(2) {
+  align-self: center;
+}
+.second-face, .third-face, .fourth-face, .fifth-face, .sixth-face {
+  justify-content: space-between;
+}
+.fifth-face .column:nth-child(2) {
+  justify-content: center;
+}
+@media (max-height: 590px) {
+  body {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
